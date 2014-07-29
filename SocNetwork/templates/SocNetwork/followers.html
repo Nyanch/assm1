@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% block content %} 
+  {% if follower_list %} 
+     <ul>
+       {% for user in follower_list %} 
+       <li>
+        {{user.to_user}}
+       </li> 
+       {% endfor %} 
+    </ul> 
+  {% else %} 
+  	This is invalid. Chicken. Wing.
+  {% endif %} 
+{% endblock %}
